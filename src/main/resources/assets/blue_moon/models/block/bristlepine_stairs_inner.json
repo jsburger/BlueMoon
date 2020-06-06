@@ -1,0 +1,8 @@
+{
+  "parent": "block/inner_stairs",
+  "textures": {
+    "bottom": "blue_moon:block/bristlepine_planks",
+    "top": "blue_moon:block/bristlepine_planks",
+    "side": "blue_moon:block/bristlepine_planks"
+  }
+}

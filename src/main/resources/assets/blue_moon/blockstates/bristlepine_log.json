@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":    { "model": "blue_moon:block/bristlepine_log" },
+        "axis=z":    { "model": "blue_moon:block/bristlepine_log", "x": 90 },
+        "axis=x":    { "model": "blue_moon:block/bristlepine_log", "x": 90, "y": 90 }
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end":  "blue_moon:block/stripped_bristlepine_log_top",
+        "side": "blue_moon:block/stripped_bristlepine_log",
+        "particle": "blue_moon:block/stripped_bristlepine_log"
+    }
+}

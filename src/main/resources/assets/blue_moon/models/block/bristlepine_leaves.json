@@ -1,0 +1,7 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "blue_moon:block/bristlepine_leaves",
+    "particle": "blue_moon:block/bristlepine_leaves"
+  }
+}

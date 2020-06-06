@@ -1,0 +1,6 @@
+{
+  "parent": "block/cube_all",
+  "textures": {
+    "all": "blue_moon:block/bordered_moonstone"
+  }
+}

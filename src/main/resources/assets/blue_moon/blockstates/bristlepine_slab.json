@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "blue_moon:block/bristlepine_slab" },
+        "type=top": { "model": "blue_moon:block/bristlepine_slab_top" },
+        "type=double": { "model": "blue_moon:block/bristlepine_planks" }
+    }
+}

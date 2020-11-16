@@ -10,15 +10,15 @@ import net.minecraftforge.fml.RegistryObject;
 
 import java.util.function.Supplier;
 
-public class RegistrationUtil {
+public class RegistryUtils {
 
 
-    public static <BlockClass extends Block> RegistryObject<BlockClass> registerBlock(String name, Supplier<? extends BlockClass> supplier) {
-        return registerBlock(name, supplier, Registration.BLOCK_GROUP);
+    public static <BlockClass extends Block> RegistryObject<BlockClass> createBlock(String name, Supplier<? extends BlockClass> supplier) {
+        return createBlock(name, supplier, Registration.BLOCK_GROUP);
     }
 
     // Copied/referenced/appropriated from Atmospheric by Bageldotpng
-    public static <BlockClass extends Block> RegistryObject<BlockClass> registerBlock(String name, Supplier<? extends BlockClass> supplier, ItemGroup group) {
+    public static <BlockClass extends Block> RegistryObject<BlockClass> createBlock(String name, Supplier<? extends BlockClass> supplier, ItemGroup group) {
         RegistryObject<BlockClass> block = Registration.BLOCKS.register(name, supplier);
         Registration.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().group(group)));
         return block;

@@ -20,7 +20,7 @@ apply plugin: 'maven-publish'
 
 
 version = '0.1'
-group = 'com.jsburg.bluemoon' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
+group = 'bluemoon' // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = 'bluemoon'
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8' // Need this here so eclipse task generates correctly.

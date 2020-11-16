@@ -1,4 +1,4 @@
-package com.jsburg.bluemoon.registry;
+package bluemoon.core.registry.utility;
 
 import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.AxeItem;
 
-import static com.jsburg.bluemoon.registry.Registration.*;
+import static bluemoon.core.registry.Registration.*;
 
 public class DataRegistry {
 

@@ -1,7 +1,7 @@
-package com.jsburg.bluemoon;
+package bluemoon.core;
 
-import com.jsburg.bluemoon.registry.DataRegistry;
-import com.jsburg.bluemoon.registry.Registration;
+import bluemoon.core.registry.utility.DataRegistry;
+import bluemoon.core.registry.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;

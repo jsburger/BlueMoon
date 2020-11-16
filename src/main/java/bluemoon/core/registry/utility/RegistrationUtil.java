@@ -1,10 +1,8 @@
-package com.jsburg.bluemoon.registry;
+package bluemoon.core.registry.utility;
 
 
-import com.jsburg.bluemoon.BlueMoon;
+import bluemoon.core.registry.Registration;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.FlowerPotBlock;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;

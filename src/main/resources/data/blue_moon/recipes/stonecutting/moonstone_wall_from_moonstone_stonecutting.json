@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": [
+        {
+            "item": "blue_moon:moonstone"
+        }
+    ],
+    "result": "blue_moon:moonstone_wall",
+    "count": 1
+}

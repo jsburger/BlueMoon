@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "blue_moon:block/craterstone",
+    "top": "blue_moon:block/craterstone",
+    "side": "blue_moon:block/craterstone"
+  }
+}

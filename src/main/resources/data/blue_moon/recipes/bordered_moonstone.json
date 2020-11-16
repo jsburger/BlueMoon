@@ -1,0 +1,21 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "group": "bordered_moonstone",
+    "pattern": [
+        "s",
+        "m",
+        "s"
+    ],
+    "key": {
+        "s": {
+            "item": "minecraft:stone_slab"
+        },
+        "m": {
+            "item": "blue_moon:chiseled_moonstone"
+        }
+    },
+    "result": {
+        "count": 2,
+        "item": "blue_moon:bordered_moonstone"
+    }
+}

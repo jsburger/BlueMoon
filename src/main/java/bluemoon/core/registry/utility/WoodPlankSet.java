@@ -1,7 +1,7 @@
 package bluemoon.core.registry.utility;
 
 import net.minecraft.block.*;
-import net.minecraft.block.material.Material;
+import net.minecraft.item.ItemGroup;
 import net.minecraftforge.fml.RegistryObject;
 
 import static net.minecraft.block.material.Material.MISCELLANEOUS;
@@ -25,13 +25,13 @@ public class WoodPlankSet extends StoneBlockSet {
     public StoneBlockSet addAll() {
         this.addSlabs();
         this.addStairs();
-        FENCE      = RegistryUtils.createBlock(material_name + "_fence",      () -> new FenceBlock(properties()));
-        FENCE_GATE = RegistryUtils.createBlock(material_name + "_fence_gate", () -> new FenceGateBlock(properties()));
-        BUTTON     = RegistryUtils.createBlock(material_name + "_button",     () -> new WoodButtonBlock(AbstractBlock.Properties.create(MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0.5f)));
-        DOOR       = RegistryUtils.createBlock(material_name + "_door",       () -> new DoorBlock(properties().notSolid()));
-        TRAPDOOR   = RegistryUtils.createBlock(material_name + "_trapdoor",   () -> new TrapDoorBlock(properties().notSolid()));
+        FENCE      = RegistryUtils.createBlock(material_name + "_fence",      () -> new FenceBlock(properties()), ItemGroup.DECORATIONS);
+        FENCE_GATE = RegistryUtils.createBlock(material_name + "_fence_gate", () -> new FenceGateBlock(properties()), ItemGroup.REDSTONE);
+        BUTTON     = RegistryUtils.createBlock(material_name + "_button",     () -> new WoodButtonBlock(AbstractBlock.Properties.create(MISCELLANEOUS).doesNotBlockMovement().hardnessAndResistance(0.5f)), ItemGroup.REDSTONE);
+        DOOR       = RegistryUtils.createBlock(material_name + "_door",       () -> new DoorBlock(properties().notSolid()), ItemGroup.REDSTONE);
+        TRAPDOOR   = RegistryUtils.createBlock(material_name + "_trapdoor",   () -> new TrapDoorBlock(properties().notSolid()), ItemGroup.REDSTONE);
         PRESSURE_PLATE = RegistryUtils.createBlock(material_name + "_pressure_plate", () -> new PressurePlateBlock(PressurePlateBlock.Sensitivity.EVERYTHING,
-                properties().doesNotBlockMovement().hardnessAndResistance(0.5f)));
+                properties().doesNotBlockMovement().hardnessAndResistance(0.5f)), ItemGroup.REDSTONE);
         return this;
     }
 

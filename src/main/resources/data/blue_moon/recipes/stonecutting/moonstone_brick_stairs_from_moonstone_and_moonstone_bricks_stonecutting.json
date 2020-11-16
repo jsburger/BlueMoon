@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": [
+        {
+            "item": "blue_moon:moonstone"
+        },
+        {
+            "item": "blue_moon:moonstone_bricks"
+        }
+    ],
+    "result": "blue_moon:moonstone_brick_stairs",
+    "count": 1
+}

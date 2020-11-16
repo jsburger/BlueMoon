@@ -1,0 +1,8 @@
+{
+  "parent": "block/stairs",
+  "textures": {
+    "bottom": "blue_moon:block/moonstone",
+    "top": "blue_moon:block/moonstone",
+    "side": "blue_moon:block/moonstone"
+  }
+}

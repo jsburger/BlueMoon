@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "###",
+        "###"
+    ],
+    "key": {
+        "#": {
+            "item": "blue_moon:moonstone"
+        }
+    },
+    "result": {
+        "count": 6,
+        "item": "blue_moon:moonstone_wall"
+    }
+}

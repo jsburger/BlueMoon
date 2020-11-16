@@ -1,5 +1,6 @@
 package bluemoon.core.registry;
 
+import bluemoon.core.registry.utility.StoneBlockSet;
 import bluemoon.core.registry.utility.WoodPlankSet;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
@@ -32,9 +33,11 @@ public class Registration {
     public static final ItemGroup BLOCK_GROUP = ItemGroup.BUILDING_BLOCKS;
 
     //Blocks
+     //Craterstone
+    public static final StoneBlockSet CRATERSTONE = new StoneBlockSet(createBlock("craterstone", () -> new Block(SharedProperties.MOONSTONE)));
      //Moonstone
-    public static final RegistryObject<Block>                    MOONSTONE = createBlock("moonstone",                    () -> new Block(SharedProperties.MOONSTONE));
-    public static final RegistryObject<Block>             MOONSTONE_BRICKS = createBlock("moonstone_bricks",             () -> new Block(SharedProperties.MOONSTONE));
+    public static final StoneBlockSet                    MOONSTONE = new StoneBlockSet(createBlock("moonstone",          () -> new Block(SharedProperties.MOONSTONE)));
+    public static final StoneBlockSet             MOONSTONE_BRICKS = new StoneBlockSet(createBlock("moonstone_bricks",   () -> new Block(SharedProperties.MOONSTONE)));
     public static final RegistryObject<Block>     CRACKED_MOONSTONE_BRICKS = createBlock("cracked_moonstone_bricks",     () -> new Block(SharedProperties.MOONSTONE));
     public static final RegistryObject<Block>           CHISELED_MOONSTONE = createBlock("chiseled_moonstone",           () -> new Block(SharedProperties.MOONSTONE));
     public static final RegistryObject<Block>           BORDERED_MOONSTONE = createBlock("bordered_moonstone",           () -> new Block(SharedProperties.MOONSTONE));

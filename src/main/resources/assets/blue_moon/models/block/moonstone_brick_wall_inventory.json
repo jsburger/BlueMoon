@@ -1,0 +1,6 @@
+{
+  "parent": "block/wall_inventory",
+  "textures": {
+    "wall": "blue_moon:block/moonstone_bricks"
+  }
+}

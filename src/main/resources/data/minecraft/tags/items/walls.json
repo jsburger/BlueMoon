@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "blue_moon:moonstone_wall",
+    "blue_moon:moonstone_brick_wall",
+    "blue_moon:craterstone_wall"
+  ]
+}

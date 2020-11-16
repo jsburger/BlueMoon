@@ -1,6 +1,7 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "blue_moon:block/chiseled_moonstone"
+    "all": "blue_moon:block/chiseled_moonstone",
+    "particle": "blue_moon:block/chiseled_moonstone"
   }
 }

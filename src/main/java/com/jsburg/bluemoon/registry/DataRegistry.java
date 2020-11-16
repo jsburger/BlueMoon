@@ -2,7 +2,6 @@ package com.jsburg.bluemoon.registry;
 
 import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
-import net.minecraft.block.LogBlock;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.AxeItem;
@@ -17,6 +16,7 @@ public class DataRegistry {
 
         RenderTypeLookup.setRenderLayer(       BRISTLEPINE_SAPLING.get(), RenderType.getCutout());
         RenderTypeLookup.setRenderLayer(POTTED_BRISTLEPINE_SAPLING.get(), RenderType.getCutout());
+        RenderTypeLookup.setRenderLayer(          BRISTLEPINE_DOOR.get(), RenderType.getCutout());
 
     }
 

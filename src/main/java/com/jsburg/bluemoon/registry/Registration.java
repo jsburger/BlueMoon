@@ -20,8 +20,8 @@ import static com.jsburg.bluemoon.registry.RegistrationUtil.*;
 @SuppressWarnings("deprecation")
 public class Registration {
 
-    public static final DeferredRegister<Block> BLOCKS = new DeferredRegister<>(ForgeRegistries.BLOCKS, MODID);
-    public static final DeferredRegister<Item> ITEMS = new DeferredRegister<>(ForgeRegistries.ITEMS, MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
 
     public static void register() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -47,8 +47,8 @@ public class Registration {
      //Bristlepine
     public static final RegistryObject<Block>        BRISTLEPINE_SAPLING = registerBlock("bristlepine_sapling",        () -> new BlueMoonSaplingBlock(new AcaciaTree(), Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT)));
     public static final RegistryObject<Block>         BRISTLEPINE_LEAVES = registerBlock("bristlepine_leaves",         () -> new LeavesBlock(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly().sound(SoundType.PLANT).notSolid()));
-    public static final RegistryObject<Block>            BRISTLEPINE_LOG = registerBlock("bristlepine_log",            () -> new LogBlock(MaterialColor.DIAMOND, Block.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
-    public static final RegistryObject<Block>   STRIPPED_BRISTLEPINE_LOG = registerBlock("stripped_bristlepine_log",   () -> new LogBlock(MaterialColor.DIAMOND, Block.Properties.create(Material.WOOD, MaterialColor.LAPIS).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block>            BRISTLEPINE_LOG = registerBlock("bristlepine_log",            () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block>   STRIPPED_BRISTLEPINE_LOG = registerBlock("stripped_bristlepine_log",   () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.LAPIS).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block>           BRISTLEPINE_WOOD = registerBlock("bristlepine_wood",           () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block>  STRIPPED_BRISTLEPINE_WOOD = registerBlock("stripped_bristlepine_wood",  () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.LAPIS).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
 
@@ -64,7 +64,6 @@ public class Registration {
 
     //Potted plants
      //Saplings
-    public static final RegistryObject<Block> POTTED_BRISTLEPINE_SAPLING = registerBlock("potted_bristlepine_sapling", () -> new FlowerPotBlock(BRISTLEPINE_SAPLING.get(), Block.Properties.from(Blocks.POTTED_AZURE_BLUET)));
+    public static final RegistryObject<Block> POTTED_BRISTLEPINE_SAPLING = BLOCKS.register("potted_bristlepine_sapling", () -> new FlowerPotBlock(BRISTLEPINE_SAPLING.get(), Block.Properties.from(Blocks.POTTED_AZURE_BLUET)));
 
 }
-

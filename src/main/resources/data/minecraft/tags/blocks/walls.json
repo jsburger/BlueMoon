@@ -3,6 +3,9 @@
   "values": [
     "blue_moon:moonstone_wall",
     "blue_moon:moonstone_brick_wall",
-    "blue_moon:craterstone_wall"
+    "blue_moon:craterstone_wall",
+    "blue_moon:nebulite_wall",
+    "blue_moon:ablanite_wall",
+    "blue_moon:polished_ablanite_wall"
   ]
 }

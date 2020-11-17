@@ -3,6 +3,10 @@
   "values": [
     "blue_moon:moonstone_stairs",
     "blue_moon:moonstone_brick_stairs",
-    "blue_moon:craterstone_stairs"
+    "blue_moon:craterstone_stairs",
+    "blue_moon:nebulite_stairs",
+    "blue_moon:polished_nebulite_stairs",
+    "blue_moon:ablanite_stairs",
+    "blue_moon:polished_ablanite_stairs"
   ]
 }

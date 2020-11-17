@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "type=bottom": { "model": "blue_moon:block/polished_ablanite_slab" },
+        "type=top": { "model": "blue_moon:block/polished_ablanite_slab_top" },
+        "type=double": { "model": "blue_moon:block/polished_ablanite" }
+    }
+}

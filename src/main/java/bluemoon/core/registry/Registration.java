@@ -43,8 +43,12 @@ public class Registration {
     public static final RegistryObject<Block>           BORDERED_MOONSTONE = createBlock("bordered_moonstone",           () -> new Block(SharedProperties.MOONSTONE));
     public static final RegistryObject<Block>          MOONSTONE_FLAGSTONE = createBlock("moonstone_flagstone",          () -> new Block(SharedProperties.MOONSTONE));
     public static final RegistryObject<Block> BORDERED_MOONSTONE_FLAGSTONE = createBlock("bordered_moonstone_flagstone", () -> new Block(SharedProperties.MOONSTONE));
-
-
+     //Nebulite
+    public static final StoneBlockSet NEBULITE          = new StoneBlockSet(createBlock("nebulite", () -> new Block(SharedProperties.NEBULITE)));
+    public static final StoneBlockSet POLISHED_NEBULITE = new StoneBlockSet(createBlock("polished_nebulite", () -> new Block(SharedProperties.NEBULITE)), false).addSlabs().addStairs();
+     //Ablanite
+    public static final StoneBlockSet ABLANITE          = new StoneBlockSet(createBlock("ablanite", () -> new Block(SharedProperties.ABLANITE)));
+    public static final StoneBlockSet POLISHED_ABLANITE = new StoneBlockSet(createBlock("polished_ablanite", () -> new Block(SharedProperties.ABLANITE)));
 
      //Bristlepine
     public static final RegistryObject<Block>        BRISTLEPINE_SAPLING = createBlock("bristlepine_sapling",        () -> new SaplingBlock(new AcaciaTree(), Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT)));

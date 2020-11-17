@@ -1,0 +1,8 @@
+{
+  "parent": "block/slab",
+  "textures": {
+    "bottom": "blue_moon:block/nebulite",
+    "top": "blue_moon:block/nebulite",
+    "side": "blue_moon:block/nebulite"
+  }
+}

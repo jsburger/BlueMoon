@@ -1,0 +1,13 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": [
+        {
+            "item": "blue_moon:ablanite"
+        },
+        {
+            "item": "blue_moon:polished_ablanite"
+        }
+    ],
+    "result": "blue_moon:polished_ablanite_wall",
+    "count": 1
+}

@@ -1,0 +1,16 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "XX",
+        "XX"
+    ],
+    "key": {
+        "X": {
+            "item": "blue_moon:ablanite"
+        }
+    },
+    "result": {
+        "count": 4,
+        "item": "blue_moon:polished_ablanite"
+    }
+}

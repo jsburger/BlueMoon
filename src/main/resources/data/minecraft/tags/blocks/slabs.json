@@ -3,6 +3,10 @@
   "values": [
     "blue_moon:moonstone_slab",
     "blue_moon:moonstone_brick_slab",
-    "blue_moon:craterstone_slab"
+    "blue_moon:craterstone_slab",
+    "blue_moon:nebulite_slab",
+    "blue_moon:polished_nebulite_slab",
+    "blue_moon:ablanite_slab",
+    "blue_moon:polished_ablanite_slab"
   ]
 }

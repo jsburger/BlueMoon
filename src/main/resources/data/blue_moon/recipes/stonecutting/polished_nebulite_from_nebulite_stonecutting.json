@@ -1,0 +1,10 @@
+{
+    "type": "minecraft:stonecutting",
+    "ingredient": [
+        {
+            "item": "blue_moon:nebulite"
+        }
+    ],
+    "result": "blue_moon:polished_nebulite",
+    "count": 1
+}

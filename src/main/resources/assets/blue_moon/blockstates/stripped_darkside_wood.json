@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "axis=y":    { "model": "blue_moon:block/stripped_darkside_wood" },
+        "axis=z":    { "model": "blue_moon:block/stripped_darkside_wood", "x": 90 },
+        "axis=x":    { "model": "blue_moon:block/stripped_darkside_wood", "x": 90, "y": 90 }
+    }
+}

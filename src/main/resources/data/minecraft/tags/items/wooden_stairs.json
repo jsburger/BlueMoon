@@ -2,6 +2,8 @@
   "replace": false,
   "values": [
     "blue_moon:bristlepine_slab",
-    "blue_moon:bristlepine_stairs"
+    "blue_moon:bristlepine_stairs",
+    "blue_moon:darkside_stairs",
+    "blue_moon:lightside_stairs"
   ]
 }

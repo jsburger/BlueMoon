@@ -17,7 +17,6 @@ import net.minecraftforge.registries.ForgeRegistries;
 import static bluemoon.core.BlueMoon.MODID;
 import static bluemoon.core.registry.utility.RegistryUtils.createBlock;
 
-@SuppressWarnings("deprecation")
 public class Registration {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
@@ -57,11 +56,37 @@ public class Registration {
     public static final RegistryObject<Block>   STRIPPED_BRISTLEPINE_LOG = createBlock("stripped_bristlepine_log",   () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.LAPIS).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block>           BRISTLEPINE_WOOD = createBlock("bristlepine_wood",           () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block>  STRIPPED_BRISTLEPINE_WOOD = createBlock("stripped_bristlepine_wood",  () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.LAPIS).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> POTTED_BRISTLEPINE_SAPLING = createPottedPlant(BRISTLEPINE_SAPLING);
 
     public static final WoodPlankSet BRISTLEPINE_PLANKS = new WoodPlankSet(createBlock("bristlepine_planks", () -> new Block(SharedProperties.BRISTLEPINE())));
 
-    //Potted plants
-     //Saplings
-    public static final RegistryObject<Block> POTTED_BRISTLEPINE_SAPLING = BLOCKS.register("potted_bristlepine_sapling", () -> new FlowerPotBlock(BRISTLEPINE_SAPLING.get(), Block.Properties.from(Blocks.POTTED_AZURE_BLUET)));
+     //Lightside Oak
+    public static final RegistryObject<Block>        LIGHTSIDE_SAPLING = createBlock("lightside_sapling",        () -> new SaplingBlock(new AcaciaTree(), Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT)));
+    public static final RegistryObject<Block>         LIGHTSIDE_LEAVES = createBlock("lightside_leaves",         () -> new LeavesBlock(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly().sound(SoundType.PLANT).notSolid()));
+    public static final RegistryObject<Block>            LIGHTSIDE_LOG = createBlock("lightside_log",            () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block>   STRIPPED_LIGHTSIDE_LOG = createBlock("stripped_lightside_log",   () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block>           LIGHTSIDE_WOOD = createBlock("lightside_wood",           () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block>  STRIPPED_LIGHTSIDE_WOOD = createBlock("stripped_lightside_wood",  () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> POTTED_LIGHTSIDE_SAPLING = createPottedPlant(LIGHTSIDE_SAPLING);
 
+    public static final WoodPlankSet LIGHTSIDE_PLANKS = new WoodPlankSet(createBlock("lightside_planks", () -> new Block(SharedProperties.LIGHTSIDE_OAK)));
+
+     //Darkside Oak
+    public static final RegistryObject<Block>        DARKSIDE_SAPLING = createBlock("darkside_sapling",        () -> new SaplingBlock(new AcaciaTree(), Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT)));
+    public static final RegistryObject<Block>         DARKSIDE_LEAVES = createBlock("darkside_leaves",         () -> new LeavesBlock(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly().sound(SoundType.PLANT).notSolid()));
+    public static final RegistryObject<Block>            DARKSIDE_LOG = createBlock("darkside_log",            () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block>   STRIPPED_DARKSIDE_LOG = createBlock("stripped_darkside_log",   () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block>           DARKSIDE_WOOD = createBlock("darkside_wood",           () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block>  STRIPPED_DARKSIDE_WOOD = createBlock("stripped_darkside_wood",  () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.SNOW).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block> POTTED_DARKSIDE_SAPLING = createPottedPlant(DARKSIDE_SAPLING);
+
+    public static final WoodPlankSet DARKSIDE_PLANKS = new WoodPlankSet(createBlock("darkside_planks", () -> new Block(SharedProperties.DARKSIDE_OAK)));
+
+
+    private static RegistryObject<Block> createPottedPlant(RegistryObject<Block> plant) {
+        String name = plant.getId().getPath();
+        Block pot = new FlowerPotBlock(() -> (FlowerPotBlock) Blocks.FLOWER_POT.delegate.get(), plant, Block.Properties.from(Blocks.POTTED_AZURE_BLUET));
+        ((FlowerPotBlock)Blocks.FLOWER_POT).addPlant(plant.getId(), () -> pot);
+        return BLOCKS.register("potted_" + name, () -> pot);
+    }
 }

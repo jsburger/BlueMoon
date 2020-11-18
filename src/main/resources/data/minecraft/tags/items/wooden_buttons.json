@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "blue_moon:bristlepine_button"
+    "blue_moon:bristlepine_button",
+    "blue_moon:darkside_button",
+    "blue_moon:lightside_button"
   ]
 }

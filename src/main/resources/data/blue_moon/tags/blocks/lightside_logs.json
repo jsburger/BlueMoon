@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "blue_moon:lightside_log",
+    "blue_moon:stripped_lightside_log",
+    "blue_moon:lightside_wood",
+    "blue_moon:stripped_lightside_wood"
+  ]
+}

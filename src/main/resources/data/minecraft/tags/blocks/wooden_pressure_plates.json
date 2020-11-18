@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "blue_moon:bristlepine_pressure_plate"
+    "blue_moon:bristlepine_pressure_plate",
+    "blue_moon:darkside_pressure_plate",
+    "blue_moon:lightside_pressure_plate"
   ]
 }

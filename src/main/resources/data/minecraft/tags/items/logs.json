@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "#blue_moon:bristlepine_logs"
+    "#blue_moon:bristlepine_logs",
+    "#blue_moon:darkside_logs",
+    "#blue_moon:lightside_logs"
   ]
 }

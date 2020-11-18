@@ -1,12 +1,11 @@
 package bluemoon.core.registry;
 
 
-import net.minecraft.block.AbstractBlock;
-import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.block.SoundType;
+import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.world.IBlockReader;
 
 public class SharedProperties {
 
@@ -22,13 +21,28 @@ public class SharedProperties {
     public static final AbstractBlock.Properties ABLANITE = AbstractBlock.Properties
             .create(Material.ROCK, MaterialColor.WHITE_TERRACOTTA)
             .setRequiresTool().hardnessAndResistance(1.5F, 6.0F)
-            .setLightLevel((state) -> 3);
+            .setLightLevel((state) -> 5)
+            .notSolid();
 
     public static Block.Properties BRISTLEPINE() {
         return Block.Properties
                 .create(Material.WOOD, MaterialColor.DIAMOND)
                 .hardnessAndResistance(2.0F, 3.0F)
                 .sound(SoundType.WOOD);
+    }
+
+    public static final AbstractBlock.Properties LIGHTSIDE_OAK = woodWithColor(MaterialColor.SNOW);
+    public static final AbstractBlock.Properties DARKSIDE_OAK = woodWithColor(MaterialColor.BROWN);
+
+    private static AbstractBlock.Properties woodWithColor(MaterialColor color) {
+        return AbstractBlock.Properties
+                .create(Material.WOOD, color)
+                .hardnessAndResistance(2.0F, 3.0F)
+                .sound(SoundType.WOOD);
+    }
+
+    private static boolean needsPostProcessing(BlockState state, IBlockReader reader, BlockPos pos) {
+        return true;
     }
 
 }

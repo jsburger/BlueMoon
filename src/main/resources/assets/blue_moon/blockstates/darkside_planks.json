@@ -1,0 +1,18 @@
+{
+  "variants": {
+    "": [
+      {
+        "model": "blue_moon:block/darkside_planks",
+        "weight": 1
+      },
+      {
+        "model": "blue_moon:block/damaged_darkside_planks",
+        "weight": 1
+      },
+      {
+        "model": "blue_moon:block/weathered_darkside_planks",
+        "weight": 1
+      }
+    ]
+  }
+}

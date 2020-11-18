@@ -1,0 +1,6 @@
+{
+  "parent": "block/button",
+  "textures": {
+    "texture": "blue_moon:block/darkside_planks"
+  }
+}

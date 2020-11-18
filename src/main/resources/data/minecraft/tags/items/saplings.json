@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "blue_moon:bristlepine_sapling"
+    "blue_moon:bristlepine_sapling",
+    "blue_moon:darkside_sapling",
+    "blue_moon:lightside_sapling"
   ]
 }

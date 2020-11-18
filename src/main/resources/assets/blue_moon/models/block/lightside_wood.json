@@ -1,0 +1,8 @@
+{
+    "parent": "block/cube_column",
+    "textures": {
+        "end":  "blue_moon:block/lightside_log",
+        "side": "blue_moon:block/lightside_log",
+        "particle": "blue_moon:block/lightside_log"
+    }
+}

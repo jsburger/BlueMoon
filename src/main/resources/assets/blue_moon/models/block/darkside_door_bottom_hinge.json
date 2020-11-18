@@ -1,0 +1,7 @@
+{
+  "parent": "block/door_bottom_rh",
+  "textures": {
+    "bottom": "blue_moon:block/darkside_door_bottom",
+    "top": "blue_moon:block/darkside_door_top"
+  }
+}

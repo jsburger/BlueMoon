@@ -51,9 +51,9 @@ public class Registration {
     public static final StoneBlockSet POLISHED_ABLANITE = new StoneBlockSet(createBlock("polished_ablanite", () -> new Block(SharedProperties.ABLANITE)));
 
      //Bristlepine
-    public static final RegistryObject<Block>        BRISTLEPINE_SAPLING = createBlock("bristlepine_sapling",        () -> new SaplingBlock(new BristlepineTree(), Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT)));
     public static final RegistryObject<Block>         BRISTLEPINE_LEAVES = createBlock("bristlepine_leaves",         () -> new LeavesBlock(Block.Properties.create(Material.LEAVES).hardnessAndResistance(0.2F).tickRandomly().sound(SoundType.PLANT).notSolid()));
     public static final RegistryObject<Block>            BRISTLEPINE_LOG = createBlock("bristlepine_log",            () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
+    public static final RegistryObject<Block>        BRISTLEPINE_SAPLING = createBlock("bristlepine_sapling",        () -> new SaplingBlock(new BristlepineTree(), Block.Properties.create(Material.PLANTS).doesNotBlockMovement().tickRandomly().hardnessAndResistance(0.0F).sound(SoundType.PLANT)));
     public static final RegistryObject<Block>   STRIPPED_BRISTLEPINE_LOG = createBlock("stripped_bristlepine_log",   () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.LAPIS).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block>           BRISTLEPINE_WOOD = createBlock("bristlepine_wood",           () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.BLACK).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));
     public static final RegistryObject<Block>  STRIPPED_BRISTLEPINE_WOOD = createBlock("stripped_bristlepine_wood",  () -> new RotatedPillarBlock(Block.Properties.create(Material.WOOD, MaterialColor.LAPIS).hardnessAndResistance(2.0F).sound(SoundType.WOOD)));

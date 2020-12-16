@@ -1,11 +1,16 @@
 package bluemoon.core;
 
+import bluemoon.core.crafting.TransformationRecipe;
 import bluemoon.core.registry.utility.DataRegistry;
 import bluemoon.core.registry.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
+import net.minecraft.item.crafting.IRecipeSerializer;
+import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.registry.Registry;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.RegistryEvent;
+import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
@@ -19,7 +24,7 @@ import org.apache.logging.log4j.Logger;
 @Mod("blue_moon")
 public class BlueMoon {
 
-    public static final String MODID = "blue_moon";
+    public static final String MOD_ID = "blue_moon";
 
 
     // Directly reference a log4j logger.
@@ -29,22 +34,25 @@ public class BlueMoon {
 
         Registration.register();
 
-        // Register the setup method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::setup);
-        // Register the doClientStuff method for modloading
-        FMLJavaModLoadingContext.get().getModEventBus().addListener(this::doClientStuff);
+        final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
-        // Register ourselves for server and other game events we are interested in
-        MinecraftForge.EVENT_BUS.register(this);
+        modEventBus.addListener(this::setup);
+        modEventBus.addListener(this::doClientStuff);
+        modEventBus.addGenericListener(IRecipeSerializer.class, this::registerRecipeSerializers);
+
     }
 
-    private void setup(final FMLCommonSetupEvent event)
-    {
+    private void setup(final FMLCommonSetupEvent event) {
         DataRegistry.setupStrippables();
-        // some preinit code
-        LOGGER.info("HELLO FROM PREINIT");
-        LOGGER.info("DIRT BLOCK >> {}", Blocks.DIRT.getRegistryName());
     }
+
+    void registerRecipeSerializers(final RegistryEvent.Register<IRecipeSerializer<?>> event) {
+        //Register the recipe type
+        Registry.register(Registry.RECIPE_TYPE, new ResourceLocation(TransformationRecipe.TYPE.toString()), TransformationRecipe.TYPE);
+        //Register the serializer
+        event.getRegistry().register(TransformationRecipe.SERIALIZER);
+    }
+
 
     private void doClientStuff(final FMLClientSetupEvent event) {
         DataRegistry.setupRenderLayers();

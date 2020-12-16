@@ -1,0 +1,11 @@
+{
+  "type": "blue_moon:transformation",
+  "ingredient": [
+    {
+      "item": "minecraft:stone"
+    }
+  ],
+  "result": {
+    "item": "blue_moon:moonstone"
+  }
+}

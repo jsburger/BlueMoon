@@ -1,5 +1,6 @@
 package bluemoon.core.registry;
 
+import bluemoon.common.block.MonolithBlock;
 import bluemoon.common.block.trees.BristlepineTree;
 import bluemoon.core.registry.utility.StoneBlockSet;
 import bluemoon.core.registry.utility.WoodPlankSet;
@@ -15,13 +16,13 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static bluemoon.core.BlueMoon.MODID;
+import static bluemoon.core.BlueMoon.MOD_ID;
 import static bluemoon.core.registry.utility.RegistryUtils.createBlock;
 
 public class Registration {
 
-    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MODID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MODID);
+    public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MOD_ID);
+    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
 
     public static void register() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
@@ -83,6 +84,8 @@ public class Registration {
 
     public static final WoodPlankSet DARKSIDE_PLANKS = new WoodPlankSet(createBlock("darkside_planks", () -> new Block(SharedProperties.DARKSIDE_OAK)));
 
+     //Monolith
+    public static final RegistryObject<Block> MONOLITH = createBlock("monolith", () -> new MonolithBlock(AbstractBlock.Properties.from(Blocks.OBSIDIAN)));
 
     private static RegistryObject<Block> createPottedPlant(RegistryObject<Block> plant) {
         String name = plant.getId().getPath();

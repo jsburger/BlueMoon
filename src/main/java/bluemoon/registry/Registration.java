@@ -1,9 +1,9 @@
-package bluemoon.core.registry;
+package bluemoon.registry;
 
-import bluemoon.common.block.MonolithBlock;
-import bluemoon.common.block.trees.BristlepineTree;
-import bluemoon.core.registry.utility.StoneBlockSet;
-import bluemoon.core.registry.utility.WoodPlankSet;
+import bluemoon.blocks.MonolithBlock;
+import bluemoon.features.trees.BristlepineTree;
+import bluemoon.registry.utility.StoneBlockSet;
+import bluemoon.registry.utility.WoodPlankSet;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -16,8 +16,8 @@ import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 
-import static bluemoon.core.BlueMoon.MOD_ID;
-import static bluemoon.core.registry.utility.RegistryUtils.createBlock;
+import static bluemoon.BlueMoon.MOD_ID;
+import static bluemoon.registry.utility.RegistryUtils.createBlock;
 
 public class Registration {
 

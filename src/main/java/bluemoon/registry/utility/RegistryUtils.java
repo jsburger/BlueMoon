@@ -1,7 +1,7 @@
-package bluemoon.core.registry.utility;
+package bluemoon.registry.utility;
 
 
-import bluemoon.core.registry.Registration;
+import bluemoon.registry.Registration;
 import net.minecraft.block.Block;
 import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;

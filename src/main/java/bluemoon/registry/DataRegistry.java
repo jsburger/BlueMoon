@@ -1,13 +1,12 @@
-package bluemoon.core.registry.utility;
+package bluemoon.registry;
 
-import bluemoon.core.registry.Registration;
 import com.google.common.collect.Maps;
 import net.minecraft.block.Block;
 import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.AxeItem;
 
-import static bluemoon.core.registry.Registration.*;
+import static bluemoon.registry.Registration.*;
 
 public class DataRegistry {
 

@@ -1,6 +1,5 @@
-package bluemoon.core.util;
+package bluemoon.util;
 
-import bluemoon.core.BlueMoon;
 import net.minecraft.util.math.BlockPos;
 
 import java.util.LinkedList;

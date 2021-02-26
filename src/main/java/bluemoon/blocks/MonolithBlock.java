@@ -1,7 +1,7 @@
-package bluemoon.common.block;
+package bluemoon.blocks;
 
-import bluemoon.core.crafting.LunarTransformations;
-import bluemoon.core.util.ShapeHelper;
+import bluemoon.crafting.LunarTransformations;
+import bluemoon.util.ShapeHelper;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.util.math.BlockPos;

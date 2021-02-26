@@ -1,8 +1,8 @@
-package bluemoon.core;
+package bluemoon;
 
-import bluemoon.core.crafting.TransformationRecipe;
-import bluemoon.core.registry.utility.DataRegistry;
-import bluemoon.core.registry.Registration;
+import bluemoon.crafting.TransformationRecipe;
+import bluemoon.registry.DataRegistry;
+import bluemoon.registry.Registration;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;

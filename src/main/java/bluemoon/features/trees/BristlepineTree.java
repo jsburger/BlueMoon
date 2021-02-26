@@ -1,6 +1,6 @@
-package bluemoon.common.block.trees;
+package bluemoon.features.trees;
 
-import bluemoon.core.registry.Registration;
+import bluemoon.registry.Registration;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.trees.Tree;

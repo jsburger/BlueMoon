@@ -1,4 +1,4 @@
-package bluemoon.core.registry.utility;
+package bluemoon.registry.utility;
 
 import net.minecraft.block.*;
 import net.minecraft.item.ItemGroup;

@@ -1,9 +1,8 @@
-package bluemoon.core.crafting;
+package bluemoon.crafting;
 
-import bluemoon.core.BlueMoon;
+import bluemoon.BlueMoon;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
-import net.minecraft.block.AbstractBlock;
 import net.minecraft.block.Block;
 import net.minecraft.inventory.IInventory;
 import net.minecraft.item.ItemStack;

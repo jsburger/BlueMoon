@@ -1,4 +1,4 @@
-package bluemoon.core.registry;
+package bluemoon.registry;
 
 
 import net.minecraft.block.*;

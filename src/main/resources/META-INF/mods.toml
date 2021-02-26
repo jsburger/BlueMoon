@@ -3,12 +3,11 @@ loaderVersion="[31,)" #mandatory This is typically bumped every Minecraft versio
 issueTrackerURL="http://my.issue.tracker/" #optional
 license="All Rights Reserved"
 [[mods]] #mandatory
-    modId="blue_moon" #mandatory
+    modId="blue_moon"
     version="${file.jarVersion}"
-    displayName="Once in a Blue Moon" #mandatory
+    displayName="Once in a Blue Moon"
     credits="Jsburg's Mom" #optional
-    authors="Jsburg, THX, Smash Brothers, Karmelyth" #optional
-    # The description text for the mod (multi line!) (#mandatory)
+    authors="Jsburg, THX, Smash Brothers, Karmelyth"
     description='''
     An expansion to Minecraft themed around the moon and all the terrible things that could come from it!
     '''

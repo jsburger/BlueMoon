@@ -6,7 +6,7 @@ import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.RenderTypeLookup;
 import net.minecraft.item.AxeItem;
 
-import static bluemoon.registry.Registration.*;
+import static bluemoon.registry.AllBlocks.*;
 
 public class DataRegistry {
 

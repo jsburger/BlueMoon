@@ -1,6 +1,6 @@
 package bluemoon.features.trees;
 
-import bluemoon.registry.Registration;
+import bluemoon.registry.AllBlocks;
 import com.mojang.serialization.Codec;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.trees.Tree;
@@ -27,8 +27,8 @@ public class BristlepineTree extends Tree {
         // config is lazy to let blocks register, though that might be fixable by not having the sapling register before logs
         config = new LazyValue<>(() ->
                 (new BaseTreeFeatureConfig.Builder(
-                        new SimpleBlockStateProvider(Registration.BRISTLEPINE_LOG.get().getDefaultState()),
-                        new SimpleBlockStateProvider(Registration.BRISTLEPINE_LEAVES.get().getDefaultState()),
+                        new SimpleBlockStateProvider(AllBlocks.BRISTLEPINE_LOG.get().getDefaultState()),
+                        new SimpleBlockStateProvider(AllBlocks.BRISTLEPINE_LEAVES.get().getDefaultState()),
 //                        //Places round treetops: Thickness of bush             Height above wood?              Height of bush
 //                        //new FancyFoliagePlacer(FeatureSpread.func_242252_a(2), FeatureSpread.func_242252_a(2), 6),
 //                        //                     No apparent changes             Height above wood                    setting the first one to 6 breaks it
@@ -54,8 +54,8 @@ public class BristlepineTree extends Tree {
 
     public static class BristlepineTreeFeature extends Feature<BaseTreeFeatureConfig> {
 
-        private static final BlockState TRUNK = Registration.BRISTLEPINE_LOG.get().getDefaultState();
-        private static final BlockState LEAF = Registration.BRISTLEPINE_LEAVES.get().getDefaultState();
+        private static final BlockState TRUNK = AllBlocks.BRISTLEPINE_LOG.get().getDefaultState();
+        private static final BlockState LEAF = AllBlocks.BRISTLEPINE_LEAVES.get().getDefaultState();
         public BristlepineTreeFeature(Codec<BaseTreeFeatureConfig> codec) {
             super(codec);
         }

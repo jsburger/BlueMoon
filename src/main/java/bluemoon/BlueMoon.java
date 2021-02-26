@@ -1,8 +1,9 @@
 package bluemoon;
 
 import bluemoon.crafting.TransformationRecipe;
+import bluemoon.registry.AllBlocks;
+import bluemoon.registry.AllItems;
 import bluemoon.registry.DataRegistry;
-import bluemoon.registry.Registration;
 import net.minecraft.item.crafting.IRecipeSerializer;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.registry.Registry;
@@ -25,9 +26,9 @@ public class BlueMoon {
 
     public BlueMoon() {
 
-        Registration.register();
-
         final IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
+        AllBlocks.BLOCKS.register(modEventBus);
+        AllItems.ITEMS.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         modEventBus.addListener(this::clientSetup);

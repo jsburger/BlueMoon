@@ -19,16 +19,9 @@ import net.minecraftforge.registries.ForgeRegistries;
 import static bluemoon.BlueMoon.MOD_ID;
 import static bluemoon.registry.utility.RegistryUtils.createBlock;
 
-public class Registration {
+public class AllBlocks {
 
     public static final DeferredRegister<Block> BLOCKS = DeferredRegister.create(ForgeRegistries.BLOCKS, MOD_ID);
-    public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, MOD_ID);
-
-    public static void register() {
-        IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        BLOCKS.register(modEventBus);
-        ITEMS.register(modEventBus);
-    }
 
     // referenced in RegistrationUtil as the default item group
     public static final ItemGroup BLOCK_GROUP = ItemGroup.BUILDING_BLOCKS;

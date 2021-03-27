@@ -17,9 +17,6 @@ public class WoodPlankSet extends StoneBlockSet {
     public WoodPlankSet(RegistryObject<Block> base_block) {
         super(base_block);
     }
-    private Block.Properties properties() {
-        return Block.Properties.from(BLOCK.get());
-    }
 
 
     public StoneBlockSet addAll() {

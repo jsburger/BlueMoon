@@ -18,7 +18,6 @@ public class RegistryUtils {
         return createBlock(name, supplier, AllBlocks.BLOCK_GROUP);
     }
 
-    // Copied/referenced/appropriated from Atmospheric by Bageldotpng
     public static <BlockClass extends Block> RegistryObject<BlockClass> createBlock(String name, Supplier<? extends BlockClass> supplier, ItemGroup group) {
         RegistryObject<BlockClass> block = AllBlocks.BLOCKS.register(name, supplier);
         AllItems.ITEMS.register(name, () -> new BlockItem(block.get(), new Item.Properties().group(group)));

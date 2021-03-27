@@ -1,0 +1,20 @@
+{
+    "type": "minecraft:crafting_shaped",
+    "pattern": [
+        "ccc",
+        " s ",
+        " s "
+    ],
+    "key": {
+        "c": {
+            "item": "blue_moon:monolith_shard"
+        },
+        "s": {
+            "item": "blue_moon:lightside_branch"
+        }
+    },
+    "result": {
+        "count": 1,
+        "item": "blue_moon:monolithic_pickaxe"
+    }
+}

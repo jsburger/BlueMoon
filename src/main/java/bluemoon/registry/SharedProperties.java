@@ -1,6 +1,7 @@
 package bluemoon.registry;
 
 
+import net.minecraft.advancements.criterion.AbstractCriterionTrigger;
 import net.minecraft.block.*;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.material.MaterialColor;
@@ -24,13 +25,7 @@ public class SharedProperties {
             .setLightLevel((state) -> 5)
             .notSolid();
 
-    public static Block.Properties BRISTLEPINE() {
-        return Block.Properties
-                .create(Material.WOOD, MaterialColor.DIAMOND)
-                .hardnessAndResistance(2.0F, 3.0F)
-                .sound(SoundType.WOOD);
-    }
-
+    public static final AbstractBlock.Properties BRISTLEPINE = woodWithColor(MaterialColor.DIAMOND);
     public static final AbstractBlock.Properties LIGHTSIDE_OAK = woodWithColor(MaterialColor.SNOW);
     public static final AbstractBlock.Properties DARKSIDE_OAK = woodWithColor(MaterialColor.BROWN);
 

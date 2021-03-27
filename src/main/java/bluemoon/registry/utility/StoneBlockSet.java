@@ -35,7 +35,7 @@ public class StoneBlockSet {
                 .replace("tiles", "tile");
     }
 
-    private Block.Properties properties() {
+    protected Block.Properties properties() {
         return Block.Properties.from(BLOCK.get());
     }
 

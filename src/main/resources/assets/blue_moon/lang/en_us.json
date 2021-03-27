@@ -85,5 +85,9 @@
   "block.blue_moon.darkside_stairs": "Darkside Stairs",
   "block.blue_moon.darkside_leaves": "Darkside Leaves",
   "block.blue_moon.darkside_sapling": "Darkside Sapling",
-  "block.blue_moon.potted_darkside_sapling": "Potted Darkside Sapling"
+  "block.blue_moon.potted_darkside_sapling": "Potted Darkside Sapling",
+
+  "item.blue_moon.silver_ingot": "Silver Ingot",
+  "item.blue_moon.lightside_branch": "Lightside Branch",
+  "item.blue_moon.monolithic_pickaxe": "Monolithic Pickaxe"
 }
